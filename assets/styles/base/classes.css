@@ -1,0 +1,17 @@
+/* MESSAGES */
+.error-message{
+    background-color: red;
+    color: white;
+}
+
+.success-message{
+    background-color: greenyellow;
+    color: white;
+}
+
+/*  POSTS */
+
+.post{
+    display: flex;
+    padding: 10px;
+}

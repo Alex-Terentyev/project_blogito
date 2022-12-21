@@ -1,0 +1,29 @@
+/* Classic FONT - SIZES  */
+:root{
+    --text-S: 16px;
+    --text-M: 18px;
+    --text-L: 20px;
+    --text-XL: 24px;
+    --text-XXL: 28px;
+    --text-3XL: 32px;
+    --text-4XL: 40px;
+    --text-5XL: 48px;
+    --text-6XL: 64px;
+}
+
+/* Set up font sizes */
+
+:root{
+    --text-normal: var(--text-S);
+    --text-hero: var(--text-6XL);
+}
+
+
+/* COLORS */
+:root{
+--ocean-blue: rgb(57, 90, 125);
+--sky-blue: rgb(152, 195, 237);
+--sky-orange-dark: rgb(253, 80, 18);
+--sky-orange-light: rgba(236, 177, 126, 0.687);
+--cloud-violet: rgba(18, 7, 39, 0.582);
+}

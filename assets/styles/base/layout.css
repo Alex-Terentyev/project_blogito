@@ -1,0 +1,41 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, var(--sky-blue), var(--cloud-violet));
+}
+
+header{
+min-height: 200px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav li{
+    margin: 1em;
+}
+
+
+main{
+    /* background-color: var(--sky-blue); */
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: 0px 100px;
+}
+
+footer{
+    min-height: 100px;
+    background-color: var(--ocean-blue);
+    margin-top: auto;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
