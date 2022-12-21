@@ -1,0 +1,32 @@
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 10% 0;
+    /* align-items: center; */
+}
+
+form div{
+    min-height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    flex-direction: column;
+}
+
+.new-post label{
+    color: var(--cloud-violet);
+    font-size: var(--text-L);
+}
+
+.new-post input, .new-post textarea{
+    flex-grow: 1;
+    border-radius: 3px;
+    border: 2px solid var(--cloud-violet);
+}
+
+:focus{
+    /* outline: none !important; */
+    outline: 2px outset var(--cloud-violet);
+    outline-style: outset;
+}
