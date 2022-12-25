@@ -1,8 +1,12 @@
-/* BASIC SET UP */
+/* BASIC SET UP and LAYOUT */
 @import url('base/reset.css');
 @import url('base/variables.css');
 @import url('base/typography.css');
 @import url('base/layout.css');
+@import url('base/colors.css');
 
-@import url('base/forms.css');
+/* ELEMENTS */
 @import url('base/classes.css');
+@import url('elements/forms.css');
+@import url('elements/posts.css');
+@import url('elements/admin.css');
