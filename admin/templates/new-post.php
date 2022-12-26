@@ -1,27 +1,21 @@
 <?php
-$new_post = new Post;
+// $new_post = new Post;
 $error = false;
 
+$np = new post;
 if (isset($_POST['post-submitted'])){
-    global $blog_db;
-    $new_post->title = $_POST['title'];
-    $new_post->excerpt = $_POST['excerpt'];
-    $new_post->content = $_POST['content'];
-    $new_post->published_on = date('Y-m-d H:i:s');
-
-    $query = "INSERT INTO posts (`title`, `excerpt`, `content`, `published_on`) 
-    VALUES ('$new_post->title', '$new_post->excerpt', '$new_post->content', '$new_post->published_on')";
-    
-    if ($new_post->title === "" || $new_post->content ===""){
+    $np->title = $np->filter('title');
+    $np->excerpt = $np->filter('excerpt');
+    $np->content = $np->strip($_POST['content']);
+    if (empty($np->title) || empty($np->content ==="")){
         $error = true;
     }
     else{
-        $blog_db->query($query);
-        redirect_to('admin/index.php?success=true');
+        $np->insert();
     }
 }
-
 ?>
+<?php require (__DIR__. '/../../inc/layout/header.php'); ?>
 
 <?php if ($error){ ?>
     <div class="error-message">Fill up the title and content!</div>
@@ -29,15 +23,15 @@ if (isset($_POST['post-submitted'])){
 <form action="" method="post" class="new-post">
     <div>
         <label for="title"> Title </label>
-        <input type="text" name="title" value="<?php echo $new_post->title ?>">
+        <input type="text" name="title" value="<?php echo htmlspecialchars($np->title)?>">
     </div>
     <div>
         <label for="excerpt"> Excerpt </label>
-        <input type="text" name="excerpt" value="<?php echo $new_post->excerpt ?>">
+        <input type="text" name="excerpt" value="<?php echo htmlspecialchars($np->excerpt) ?>">
     </div>
     <div>
         <label for="content"> Content </label>
-        <textarea name="content" rows="4" cols="3" value="<?php echo $new_post->content ?>"></textarea>
+        <textarea name="content" rows="4" cols="3" value="<?php echo htmlspecialchars($np->content)?>"></textarea>
     </div>
     
     <input type="submit" name="post-submitted" value="Send">

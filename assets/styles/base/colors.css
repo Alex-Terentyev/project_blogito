@@ -1,0 +1,21 @@
+body{
+    background: linear-gradient(135deg, var(--sky-blue),
+     var(--cloud-violet));
+}
+
+a, a:visited{
+    color: var(--cloud-violet);
+}
+
+header h1{
+    background: -webkit-linear-gradient(
+        var(--sky-orange-light), var(--sky-orange-dark)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer{
+    background-color: var(--ocean-blue);
+    color: white;
+}

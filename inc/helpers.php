@@ -3,12 +3,6 @@
 function redirect_to($path){
     header('Location:'. SITE_URL . '/' . $path);
 }
-
-function get_all_posts(){
-    global $blog_db;
-    return $blog_db->query("SELECT * FROM posts");
-}
-
 function generate_hash($action){
     return md5($action);
 }
@@ -21,13 +15,15 @@ function check_hash($action, $hash){
 }
 
 function is_logged_in(){
-    return isset($_SESSION['user']) ? true : false;
+    return isset($_SESSION['user']) 
+    && $_SESSION['user'] === ADMIN ? true : false;
 }
 
 function log_in($user, $password){
     if ($user === ADMIN && $password === PASSWORD) {
         $_SESSION['user'] = ADMIN;  
-        redirect_to('index.php');      
+        redirect_to('admin/index.php');  
+        return true;    
     }
     return false;
 }

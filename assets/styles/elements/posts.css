@@ -1,0 +1,26 @@
+/* all-posts for POSTS ADMINISTRATION */
+
+.all-posts{
+    border: 1px solid black;
+    width: 100%;
+}
+
+.all-posts tr{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* all posts for HOME PAGE */
+
+/* single post for HOME PAGE */
+
+.post{
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.post p{
+    margin-top: 1em;
+}
