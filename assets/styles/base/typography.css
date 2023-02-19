@@ -10,6 +10,10 @@ header h1{
     font-family: 'Wendy One', sans-serif;
 }
 
+header h1::before{
+    content: "BLOGITO";
+}
+
 h2{
     font-size: var(--text-XXL);
 }
@@ -22,4 +26,8 @@ nav li a{
     color: var(--cloud-violet);
     font-size: var(--text-L);
     font-weight: 500;
+}
+
+.actions{
+    font-size: var(--text-M);
 }

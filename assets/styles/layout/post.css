@@ -1,14 +1,14 @@
 /* all-posts for POSTS ADMINISTRATION */
 
 .all-posts{
-    border: 1px solid black;
+    /* border: 0.1px solid black; */
     width: 100%;
 }
 
 .all-posts tr{
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin-top: 1em;
 }
 
 /* all posts for HOME PAGE */
@@ -19,8 +19,15 @@
     display: flex;
     padding: 20px;
     flex-direction: column;
+    border: 1px solid white;
 }
 
 .post p{
     margin-top: 1em;
+}
+
+.actions a{
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.467);
+    padding: 0.5em;
+    margin: 0.6em 0px;
 }

@@ -10,7 +10,7 @@ require('inc/class-db.php');
 require('inc/class-post.php');
 
 $blog_db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
-
+$post = new Post;
 
 if (isset($_GET['logout'])) {
     log_out();}

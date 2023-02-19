@@ -1,0 +1,87 @@
+/* FORMS GENERIC  */
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    /* align-items: center; */
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 55vh;
+    margin: 20px 0;
+    padding: 1px;
+    text-align: center;
+}
+
+input{
+    font-size: var(--text-normal);
+    font-family: Montserrat, sans-serif;
+}
+
+form div{
+    min-height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+}
+
+
+:focus{
+    /* outline: none !important; */
+    outline: 1px outset var(--cloud-violet);
+    outline-style: outset;
+}
+
+input[type=submit]{
+    background-color: rgba(255, 255, 255, 0.121);
+    border: 0px;
+    cursor: pointer;
+    /* margin-top: auto; */
+}
+
+
+/*  NEW POST and EDIT POST  */
+
+.new-post ::placeholder{
+    color: var(--cloud-violet);
+    font-size: var(--text-M);
+    font-family: Montserrat, sans-serif;
+}
+
+.new-post input, .new-post textarea{
+    border: 0px;
+    /* border: 1px solid var(--cloud-violet); */
+    padding: 0.5em;
+    position: relative;
+}
+
+div:has(.post-content){
+    flex-grow: 2;
+}
+
+.counter{
+    color: rgb(172, 172, 172);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.post-title{
+    background-color: rgba(64, 131, 190, 0.184);
+    flex-grow: 1;
+}
+
+.post-content{
+    background-color: rgba(64, 131, 190, 0.341);
+    flex-grow: 2;
+}
+
+/* LOGIN   */
+
+.login{
+    padding: 0.5em;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.438);
+}

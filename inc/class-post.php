@@ -6,7 +6,7 @@ Class post{
     public $excerpt = "";
     public $content = "";
     public $published_on = "";
-    private $pid = "";
+    public $pid = "";
     
 
     function filter($string){
@@ -31,15 +31,34 @@ Class post{
         redirect_to('admin/index.php?action=manage-posts&success=true');
     }
 
+    function update(){
+        global $blog_db;
+        $title = $blog_db->real_escape_string($this->title);
+        $excerpt = $blog_db->real_escape_string($this->excerpt);
+        $content = $blog_db->real_escape_string($this->content);
+        $blog_db->query("UPDATE `posts` 
+        SET `title` = '$title', 
+            `excerpt` = '$excerpt', 
+            `content`='$content'
+        WHERE `pid`='$this->pid' ");
+        redirect_to('admin/index.php?action=manage-posts&success=true');
+    }
+
     function get(){
         global $blog_db;
         $pid = intval($_GET['pid']);
         $post = $blog_db->query
             ("SELECT * FROM posts WHERE pid=$pid");
-        return $blog_db->fetch($post);
+        $post = $blog_db->fetch($post);
+            $this->pid = $post['pid'];
+            $this->title = $post['title'];
+            $this->excerpt = $post['excerpt'];
+            $this->content = $post['content'];
+            $this->published_on = $post['published_on'];
+        return $post;
     }
 
-    function get_all_posts(){
+    function get_all(){
         global $blog_db;
         $result = $blog_db->query("SELECT * FROM posts");
         return $blog_db->fetch_all($result);

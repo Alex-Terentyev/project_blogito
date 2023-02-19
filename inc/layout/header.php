@@ -9,7 +9,7 @@
 
 <body>
 <header>
-    <h1><a href="<?php echo SITE_URL ?>/index.php">CHIQUITITA.BLOG</a></h1>
+    <h1><a href="<?php echo SITE_URL ?>/index.php"></a></h1>
     <nav class="menu">
         <ul>
             <li><a href="<?php echo SITE_URL ?>/index.php">Home</a></li>
