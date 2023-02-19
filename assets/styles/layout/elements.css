@@ -1,0 +1,22 @@
+/* SYSTEM MESSAGES */
+.error-message, .success-message{
+    background-color: rgb(142, 8, 8);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    margin:  1.5em 0px 0px 0px;
+    font-size: var(--text-L);
+}
+
+.success-message{
+    background-color: rgb(4, 140, 99);
+}
+
+/* BUTTONS  */
+
+.delete{
+    z-index: 3;
+}

@@ -19,13 +19,10 @@ function is_logged_in(){
     && $_SESSION['user'] === ADMIN ? true : false;
 }
 
-function log_in($user, $password){
-    if ($user === ADMIN && $password === PASSWORD) {
+function log_in(){
         $_SESSION['user'] = ADMIN;  
-        redirect_to('admin/index.php');  
+        redirect_to('index.php');  
         return true;    
-    }
-    return false;
 }
 
 function log_out(){

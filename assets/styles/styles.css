@@ -2,11 +2,11 @@
 @import url('base/reset.css');
 @import url('base/variables.css');
 @import url('base/typography.css');
-@import url('base/layout.css');
 @import url('base/colors.css');
 
-/* ELEMENTS */
-@import url('base/classes.css');
-@import url('elements/forms.css');
-@import url('elements/posts.css');
-@import url('elements/admin.css');
+/* LAYOUT */
+@import url('layout/layout.css');
+@import url('layout/elements.css');
+@import url('layout/forms.css');
+@import url('layout/post.css');
+@import url('layout/admin.css');

@@ -1,11 +1,10 @@
 <?php require('ini.php'); ?>
 <?php require('inc/layout/header.php'); ?>
 <?php
-
-$apost = new post;
-$all_posts = $apost->get_all_posts();
+$post = new post;
+$all_posts = $post->get_all();
     if (isset($_GET['pid'])){
-        $all_posts = [$apost->get()];
+        $all_posts = [$post->get()];
     }
 foreach ($all_posts as $post): 
     ?>
