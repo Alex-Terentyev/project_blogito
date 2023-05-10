@@ -6,8 +6,8 @@ define('SITE_URL', 'http://localhost/mi-blogito');
 define('TIME_ZONE', 'Europe/Madrid');
 define('SITE_LANG', ['EN', 'ENG', 'en_US']);
 
-define('ADMIN', 'alex');
-define('PASSWORD', 'workbitch');
+define('ADMIN', 'admin');
+define('PASSWORD', 'TestEnvPass');
 
 //Connecting to DB
 
